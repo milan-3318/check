@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Access Required</title>
+    <style>
+        body{
+            background: #111;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial;
+        }
+        .box{
+            text-align: center;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: crimson;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>
+        <p>
+        Enter Password 
+        (The word from the bakery)
+    </p>
+    </h2>
+    <input type="password" id="password" placeholder="Enter here">
+    <br><br>
+    <button onclick="checkPassword()">Enter</button>
+</div>
+
+<script>
+    function checkPassword(){
+        var pass = document.getElementById("password").value;
+
+       if(pass === "cupcake" || pass === "CUPCAKE" || pass === "Cupcake"){
+    window.location.href = "valentine.html";
+} else {
+    window.location.href = "denied.html";
+}
+
+    }
+</script>
+
+</body>
+</html>
